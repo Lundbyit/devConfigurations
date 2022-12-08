@@ -36,6 +36,16 @@ https://ohmyposh.dev/
 Ctrl+r - Search through history
 Ctrl+t - Search provider path?
 
+## Az Predictor for az work with powershell
+
+`Install-Module Az.Accounts`
+`Install-Module -Name Az.Tools.Predictor`
+`Enable-AzPredictor -AllSession`
+
+## z
+
+Install-Module z -AllowClobber
+
 ## Shortcuts
 
 Ctrl+Shift+b - runs dotnet build
