@@ -30,13 +30,17 @@ https://ohmyposh.dev/
 
 `Install-Module -Name Terminal-Icons -Repository PSGallery`
 
+## PSFzf
+
+`Install-Module PSFzf -Force`
+Ctrl+r - Search through history
+Ctrl+t - Search provider path?
+
 ## Shortcuts
 
 Ctrl+Shift+b - runs dotnet build
 
 Alt+a - cycles through argument on current line and select text
-
-Alt+( - puts parenthesis around current selection
 
 Alt+w - saves command without executing it
 

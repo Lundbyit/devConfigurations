@@ -3,9 +3,10 @@ if ($host.Name -eq 'ConsoleHost')
     Import-Module PSReadLine
 }
 
+Import-Module posh-git
 Import-Module -Name Terminal-Icons
 
-oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/agnosterplus.omp.json" | Invoke-Expression
+oh-my-posh init pwsh --config "$env:POSH_THEMES_PATH/craver.omp.json" | Invoke-Expression
 
 Register-ArgumentCompleter -Native -CommandName winget -ScriptBlock {
     param($wordToComplete, $commandAst, $cursorPosition)
@@ -258,42 +259,6 @@ Set-PSReadLineKeyHandler -Key ')',']','}' `
     }
 }
 
-Set-PSReadLineKeyHandler -Key Backspace `
-                         -BriefDescription SmartBackspace `
-                         -LongDescription "Delete previous character or matching quotes/parens/braces" `
-                         -ScriptBlock {
-    param($key, $arg)
-
-    $line = $null
-    $cursor = $null
-    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-
-    if ($cursor -gt 0)
-    {
-        $toMatch = $null
-        if ($cursor -lt $line.Length)
-        {
-            switch ($line[$cursor])
-            {
-                <#case#> '"' { $toMatch = '"'; break }
-                <#case#> "'" { $toMatch = "'"; break }
-                <#case#> ')' { $toMatch = '('; break }
-                <#case#> ']' { $toMatch = '['; break }
-                <#case#> '}' { $toMatch = '{'; break }
-            }
-        }
-
-        if ($toMatch -ne $null -and $line[$cursor-1] -eq $toMatch)
-        {
-            [Microsoft.PowerShell.PSConsoleReadLine]::Delete($cursor - 1, 2)
-        }
-        else
-        {
-            [Microsoft.PowerShell.PSConsoleReadLine]::BackwardDeleteChar($key, $arg)
-        }
-    }
-}
-
 #endregion Smart Insert/Delete
 
 # Sometimes you enter a command but realize you forgot to do something else first.
@@ -330,34 +295,6 @@ Set-PSReadLineKeyHandler -Key Ctrl+V `
     else
     {
         [Microsoft.PowerShell.PSConsoleReadLine]::Ding()
-    }
-}
-
-# Sometimes you want to get a property of invoke a member on what you've entered so far
-# but you need parens to do that.  This binding will help by putting parens around the current selection,
-# or if nothing is selected, the whole line.
-Set-PSReadLineKeyHandler -Key 'Alt+(' `
-                         -BriefDescription ParenthesizeSelection `
-                         -LongDescription "Put parenthesis around the selection or entire line and move the cursor to after the closing parenthesis" `
-                         -ScriptBlock {
-    param($key, $arg)
-
-    $selectionStart = $null
-    $selectionLength = $null
-    [Microsoft.PowerShell.PSConsoleReadLine]::GetSelectionState([ref]$selectionStart, [ref]$selectionLength)
-
-    $line = $null
-    $cursor = $null
-    [Microsoft.PowerShell.PSConsoleReadLine]::GetBufferState([ref]$line, [ref]$cursor)
-    if ($selectionStart -ne -1)
-    {
-        [Microsoft.PowerShell.PSConsoleReadLine]::Replace($selectionStart, $selectionLength, '(' + $line.SubString($selectionStart, $selectionLength) + ')')
-        [Microsoft.PowerShell.PSConsoleReadLine]::SetCursorPosition($selectionStart + $selectionLength + 2)
-    }
-    else
-    {
-        [Microsoft.PowerShell.PSConsoleReadLine]::Replace(0, $line.Length, '(' + $line + ')')
-        [Microsoft.PowerShell.PSConsoleReadLine]::EndOfLine()
     }
 }
 
@@ -427,3 +364,14 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+b `
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet build")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
 }
+
+#zoxide
+Invoke-Expression (& {
+    $hook = if ($PSVersionTable.PSVersion.Major -lt 6) { 'prompt' } else { 'pwd' }
+    (zoxide init --hook $hook powershell | Out-String)
+})
+
+# PSFzf
+Import-Module PSFzf
+Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
+Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
