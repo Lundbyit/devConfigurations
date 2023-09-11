@@ -42,6 +42,7 @@ Set-PSReadLineOption -PredictionSource History
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
 
 Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -HistoryNoDuplicates
 Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 
@@ -152,6 +153,34 @@ Set-PSReadLineKeyHandler -Key Ctrl+Shift+b `
     [Microsoft.PowerShell.PSConsoleReadLine]::RevertLine()
     [Microsoft.PowerShell.PSConsoleReadLine]::Insert("dotnet build")
     [Microsoft.PowerShell.PSConsoleReadLine]::AcceptLine()
+}
+
+# Quick shortcut to start notepad
+function n { notepad++ $args }
+
+#Unzip file
+function unzip ($file) {
+    Write-Output("Extracting", $file, "to", $pwd)
+    $fullFile = Get-ChildItem -Path $pwd -Filter .\cove.zip | ForEach-Object { $_.FullName }
+    Expand-Archive -Path $fullFile -DestinationPath $pwd
+}
+
+#Simulate grep
+function grep($regex, $dir) {
+    if ( $dir ) {
+        Get-ChildItem $dir | select-string $regex
+        return
+    }
+    $input | select-string $regex
+}
+
+#Simulate touch
+function touch($file) {
+    "" | Out-File $file -Encoding ASCII
+}
+
+function get-pubIP {
+ (Invoke-WebRequest http://ifconfig.me/ip ).Content
 }
 
 #zoxide
