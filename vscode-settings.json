@@ -80,7 +80,9 @@
 		"<C-a>": false,
 		"<C-b>": false,
 		"<C-q>": false,
-		"<C-k>": false
+		"<C-k>": false,
+		"<C-n>": false,
+		"<C-p>": false
 	},
 	"vim.highlightedyank.enable": true,
 	"vim.useSystemClipboard": true
