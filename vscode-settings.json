@@ -1,0 +1,87 @@
+{
+	"vsicons.dontShowNewVersionMessage": true,
+	"workbench.colorTheme": "One Dark Pro",
+	"workbench.iconTheme": "vscode-icons",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+	"editor.cursorSurroundingLines": 4,
+	"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+	"editor.formatOnSave": true,
+	"javascript.updateImportsOnFileMove.enabled": "always",
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.useTabs": true,
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[html]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[jsonc]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"prettier.endOfLine": "auto",
+	"prettier.jsxSingleQuote": true,
+	"prettier.singleQuote": true,
+	"prettier.singleAttributePerLine": true,
+	"workbench.sideBar.location": "right",
+	"files.autoSave": "onFocusChange",
+	"files.trimTrailingWhitespace": true,
+	"vim.useCtrlKeys": true,
+	"vim.smartRelativeLine": true,
+	"vim.normalModeKeyBindings": [
+		{
+			"before": ["g", "p", "d"],
+			"commands": ["editor.action.peekDefinition"]
+		},
+		{
+			"before": ["g", "h"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		},
+		{
+			"before": ["g", "i"],
+			"commands": ["editor.action.goToImplementation"]
+		},
+		{
+			"before": ["g", "p", "i"],
+			"commands": ["editor.action.peekImplementation"]
+		},
+		{
+			"before": ["g", "q"],
+			"commands": ["editor.action.quickFix"]
+		},
+		{
+			"before": ["g", "r"],
+			"commands": ["editor.action.referenceSearch.trigger"]
+		},
+		{
+			"before": ["g", "t"],
+			"commands": ["editor.action.goToTypeDefinition"]
+		},
+		{
+			"before": ["g", "p", "t"],
+			"commands": ["editor.action.peekTypeDefinition"]
+		}
+	],
+	"vim.handleKeys": {
+		"<C-c>": false,
+		"<C-v>": false,
+		"<C-w>": false,
+		"<C-f>": false,
+		"<C-a>": false,
+		"<C-b>": false,
+		"<C-q>": false,
+		"<C-k>": false
+	},
+	"vim.highlightedyank.enable": true,
+	"vim.useSystemClipboard": true
+}
