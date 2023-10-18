@@ -2,6 +2,12 @@
 
 `git config --global pull.rebase true`
 
+## Prettier log graph
+*Set alias*
+`git config --global alias.lg "log --all --decorate --oneline --graph"`
+
+`git lg`
+
 ## Install delta
 
 `winget install dandavison.delta`
