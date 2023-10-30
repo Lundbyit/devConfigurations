@@ -17,3 +17,11 @@
 `git config --global delta.side-by-side true`
 
 `git config --global delta.navigate true`
+
+## Checkout
+*Lazy git*
+https://github.com/jesseduffield/lazygit
+
+*Lazy docker*
+https://github.com/jesseduffield/lazydocker
+
