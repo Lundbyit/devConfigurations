@@ -18,6 +18,8 @@
 
 `git config --global delta.navigate true`
 
+`git config --global push.autoSetupRemote true`
+
 ## Checkout
 *Lazy git*
 https://github.com/jesseduffield/lazygit
