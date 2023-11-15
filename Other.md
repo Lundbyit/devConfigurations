@@ -27,3 +27,5 @@ https://github.com/jesseduffield/lazygit
 *Lazy docker*
 https://github.com/jesseduffield/lazydocker
 
+*ZLocation*
+https://github.com/vors/ZLocation
