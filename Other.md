@@ -20,6 +20,16 @@
 
 `git config --global push.autoSetupRemote true`
 
+## Rider
+Create function to open rider with `rider`in commandline. the dot should be a in parameter
+function () { rider64.exe . }
+
+Show cognitive complexity for a function
+https://plugins.jetbrains.com/plugin/12024-cognitivecomplexity
+
+ideavim, vim emulator in rider 
+https://plugins.jetbrains.com/plugin/164-ideavim
+
 ## Checkout
 *Lazy git*
 https://github.com/jesseduffield/lazygit
