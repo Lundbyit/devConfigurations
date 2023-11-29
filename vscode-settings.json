@@ -8,6 +8,7 @@
 	"editor.cursorSurroundingLines": 8,
 	"editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
 	"editor.formatOnSave": true,
+	"editor.renderWhitespace": "boundary",
 	"javascript.updateImportsOnFileMove.enabled": "always",
 	"[javascriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -72,16 +73,20 @@
 		}
 	],
 	"vim.handleKeys": {
-		"<C-c>": false,
-		"<C-v>": false,
-		"<C-w>": false,
-		"<C-f>": false,
-		"<C-a>": false,
-		"<C-b>": false,
-		"<C-q>": false,
-		"<C-k>": false,
-		"<C-n>": false,
-		"<C-p>": false
+	        "<C-a>": false,
+	        "<C-c>": false,
+	        "<C-d>": false,
+	        "<C-e>": false,
+	        "<C-f>": false,
+	        "<C-k>": false,
+	        "<C-n>": false,
+	        "<C-p>": false,
+	        "<C-r>": false,
+	        "<C-s>": false,
+	        "<C-v>": false,
+	        "<C-w>": false,
+	        "<C-x>": false,
+	        "<C-z>": false,
 	},
 	"vim.highlightedyank.enable": true,
 	"vim.useSystemClipboard": true
