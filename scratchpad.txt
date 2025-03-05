@@ -1,0 +1,25 @@
+Nvm (https://neovim.io/)
+ - lazyvim (https://www.lazyvim.org/)
+
+## Plugins I think I use in Lazyvim
+ - Telescope ()
+ - neotree
+ - which key
+ - lazygit
+
+
+### LSP for Lua
+https://github.com/folke/lazydev.nvim
+
+### Theme
+https://github.com/folke/tokyonight.nvim
+
+### Search and jump to location
+https://github.com/folke/flash.nvim
+
+### Which key
+https://github.com/folke/which-key.nvim
+
+### Show what has changes in editor
+https://github.com/lewis6991/gitsigns.nvim
+
