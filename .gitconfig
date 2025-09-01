@@ -1,0 +1,26 @@
+[alias]
+	lg = log --all --decorate --oneline --graph
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[tag]
+	sort = version:refname
+[diff]
+	algorithm = histogram
+	colorMoved = plain
+	renames = true
+[push]
+	autoSetupRemote = true
+	followTags = true
+[fetch]
+	prune = true
+	pruneTags = true
+	all = true
+[help]
+	autocorrect = prompt
+[rerere]
+	enabled = true
+	autoupdate = true
+[pull]
+	rebase = true
