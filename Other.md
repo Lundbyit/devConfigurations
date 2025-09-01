@@ -1,7 +1,5 @@
 # Git
 
-`git config --global pull.rebase true`
-
 ## Install delta
 
 `winget install dandavison.delta`
