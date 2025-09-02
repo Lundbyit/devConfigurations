@@ -1,5 +1,11 @@
 # Configure powershell
 
+## Install powershell core
+https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.5
+
+`winget search Microsoft.PowerShell`
+`winget install --id Microsoft.PowerShell --source winget`
+
 ## Posh-Git
 
 `Install-Module posh-git -Scope CurrentUser`
@@ -24,13 +30,15 @@ https://ohmyposh.dev/
 
 ## PSFzf
 https://github.com/kelleyma49/PSFzf
+
 `Install-Module PSFzf -Force`
 Ctrl+r - Search through history
 Ctrl+t - Search provider path?
 
 ## z
 https://github.com/badmotorfinger/z
-Install-Module z -AllowClobber
+
+`Install-Module z -AllowClobber`
 
 ## Shortcuts
 
