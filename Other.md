@@ -26,12 +26,6 @@ https://plugins.jetbrains.com/plugin/164-ideavim
 *Lazy git*
 https://github.com/jesseduffield/lazygit
 
-*Lazy docker*
-https://github.com/jesseduffield/lazydocker
-
-*ZLocation*
-https://github.com/vors/ZLocation
-
 ## Vim tips
 https://dev.to/ansonh/10-vs-code-vim-tricks-to-boost-your-productivity-1b0n
 https://www.barbarianmeetscoding.com/boost-your-coding-fu-with-vscode-and-vim/cheatsheet/
