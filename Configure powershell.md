@@ -23,13 +23,13 @@ https://ohmyposh.dev/
 `Install-Module -Name Terminal-Icons -Repository PSGallery`
 
 ## PSFzf
-
+https://github.com/kelleyma49/PSFzf
 `Install-Module PSFzf -Force`
 Ctrl+r - Search through history
 Ctrl+t - Search provider path?
 
 ## z
-
+https://github.com/badmotorfinger/z
 Install-Module z -AllowClobber
 
 ## Shortcuts
