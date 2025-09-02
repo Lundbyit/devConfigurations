@@ -14,10 +14,6 @@ https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powers
 
 https://github.com/microsoft/cascadia-code
 
-## Terminal Icon
-
-`Install-Module -Name Terminal-Icons -Repository PSGallery`
-
 ## PSFzf
 https://github.com/kelleyma49/PSFzf
 
