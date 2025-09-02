@@ -10,19 +10,9 @@ https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powers
 
 `Install-Module posh-git -Scope CurrentUser`
 
-## Color scheme
-
-Dracula
-
 ## Font
 
 https://github.com/microsoft/cascadia-code
-
-## Oh-my-posh
-
-https://github.com/JanDeDobbeleer/oh-my-posh
-https://ohmyposh.dev/
-`winget install JanDeDobbeleer.OhMyPosh`
 
 ## Terminal Icon
 
