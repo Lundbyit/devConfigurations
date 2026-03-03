@@ -11,6 +11,11 @@
 ```
 cat << 'EOF' >> ~/.bashrc
 
+# Configure zoxide
+eval "$(zoxide init bash --cmd cd)"
+_ZO_ECHO=1 -- Shows full path
+export _ZO_EXCLUDE_DIRS="$_ZO_EXCLUDE_DIRS:**/node_modules/*"
+
 # fzf configuration with ripgrep
 eval "$(zoxide init bash)"
 export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
