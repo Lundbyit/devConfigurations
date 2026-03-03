@@ -25,6 +25,18 @@ EOF
 
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash` - nvm for nodejs
 
+# LazyVim
+mv ~/.config/nvim{,.bak}
+
+# optional but recommended
+mv ~/.local/share/nvim{,.bak}
+mv ~/.local/state/nvim{,.bak}
+mv ~/.cache/nvim{,.bak}
+
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
+
+
 `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`
 
 `sudo zypper addrepo --refresh https://packages.microsoft.com/config/opensuse/15/prod.repo`
