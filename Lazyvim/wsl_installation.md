@@ -8,6 +8,16 @@
 
 `sudo zypper in neovim fd tar git fzf gh lazygit ripgrep curl zoxide`
 
+```
+cat << 'EOF' >> ~/.bashrc
+
+# fzf configuration with ripgrep
+eval "$(zoxide init bash)"
+export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+EOF
+```
+
 `curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash` - nvm for nodejs
 
 `sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc`
