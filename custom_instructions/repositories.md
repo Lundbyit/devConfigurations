@@ -3,6 +3,9 @@
 https://github.com/vercel-labs/agent-skills
 https://github.com/anthropics/skills
 https://github.com/anchildress1/awesome-github-copilot
+https://github.com/hesreallyhim/awesome-claude-code
+https://github.com/travisvn/awesome-claude-skills
+
 
 # Step by step course(?)
 
